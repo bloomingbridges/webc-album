@@ -6,17 +6,30 @@
 		<meta name="description" content="">
 		<title></title>
 		<style>
+			@font-face {
+				font-family: 'Ubuntu Mono';
+				font-style: normal;
+				font-display: swap;
+				font-weight: 400;
+				src: url(https://cdn.jsdelivr.net/fontsource/fonts/ubuntu-mono@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/ubuntu-mono@latest/latin-400-normal.woff) format('woff');
+				unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+			}
 			* {
 				box-sizing: border-box;
 			}
 			html,
 			body {
-				font-family: monospace;
+				font-family: "Ubuntu Mono";
 				margin: 0;
 				padding: 0;
 			}
 			h1 {
 				margin: 0;
+				line-height: 1.5em;
+			}
+			p {
+				margin: 2rem auto;
+				line-height: 2rem;
 			}
 			img {
 				border: 0;
@@ -25,12 +38,15 @@
 			main {
 				width: 100%;
 				max-width: 960px;
-				padding: 1em;
+				padding: 2rem 1rem 0;
+				text-align: center;
 			}
 			@media screen and (min-width: 960px) {
 				main {
 					margin: 4rem auto;
-					border: 2px solid black;
+					border: 2px solid lightgrey;
+					border-radius: 4px;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
 				}
 			}
 		</style>

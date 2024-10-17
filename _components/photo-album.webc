@@ -1,22 +1,29 @@
-<div><slot></slot></div>
-
-<template webc:type="md">
-	<div class="album">
-		<em>ALBUM GOES HERE</em>
-	</div>
+<template webc:type="11ty">
+	<div class="album"><slot></slot></div>
 </template>
 
-<style webc:scoped>
+<style>
 	.album {
-		display: flex;
-		flex-direction: horizontal;
-		justify-content: space-evenly;
+		display: grid;
+		grid-template-columns: 1fr;
 		gap: 1em;
+	}
+	.album img {
+		width: 100%;
+		height: auto;
+	}
+	@media screen and (min-width: 480px) {
+		.album:has(> :last-child:nth-child(2)) {
+			grid-template-columns: 1fr 1fr;
+		}
+		.album:has(> :last-child:nth-child(3)) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	}
 </style>
 
 <script>
-window.customElements.define("album", class extends HTMLElement {
+window.customElements.define("photo-album", class extends HTMLElement {
 	connectedCallback() {
 		// let tmpl = this.querySelector("template");
 		// tmpl.replaceWith(tmpl.content);

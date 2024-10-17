@@ -3,15 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve --incremental"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/11ty"
   },
   "author": {
     "name": "Florian Brueckner",
@@ -25,7 +17,8 @@
   "bugs": "https://github.com/bloomingbridges/webc-album/issues",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-webc": "^0.11.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "markdown-it": "^14.1.0"
   }
 }

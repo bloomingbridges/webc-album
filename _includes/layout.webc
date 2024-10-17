@@ -5,10 +5,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<title></title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				font-family: monospace;
+				margin: 0;
+				padding: 0;
+			}
+			h1 {
+				margin: 0;
+			}
+			img {
+				border: 0;
+				margin: 0;
+			}
+			main {
+				width: 100%;
+				max-width: 960px;
+				padding: 1em;
+			}
+			@media screen and (min-width: 960px) {
+				main {
+					margin: 4rem auto;
+					border: 2px solid black;
+				}
+			}
+		</style>
 		<style @raw="getBundle('css')" webc:keep></style>
 	</head>
 	<body>
-		<div @raw="content" webc:nokeep></div>
+		<main>
+			<div @raw="content" webc:nokeep></div>
+		</main>
 		<script type="module" @raw="getBundle('js')" webc:keep></script>
 	</body>
 </html>

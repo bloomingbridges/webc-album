@@ -1,5 +1,5 @@
 {
-  "name": "@11ty/demo-webc-counter",
+  "name": "webc-album",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -14,15 +14,15 @@
     "url": "https://opencollective.com/11ty"
   },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Florian Brueckner",
+    "email": "brueckner.florian@gmail.com",
+    "url": "https://bloomingbridges.xyz/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/11ty/demo-webc-counter.git"
+    "url": "git://github.com/bloomingbridges/webc-album.git"
   },
-  "bugs": "https://github.com/11ty/demo-webc-counter/issues",
+  "bugs": "https://github.com/bloomingbridges/webc-album/issues",
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

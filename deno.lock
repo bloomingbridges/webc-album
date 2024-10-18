@@ -1116,6 +1116,7 @@
       "dependencies": [
         "npm:@11ty/eleventy-plugin-webc@~0.11.2",
         "npm:@11ty/eleventy@3",
+        "npm:@mdit/plugin-container@~0.13.1",
         "npm:markdown-it@^14.1.0"
       ]
     }

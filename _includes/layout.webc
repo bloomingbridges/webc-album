@@ -20,6 +20,7 @@
 			html,
 			body {
 				font-family: "Ubuntu Mono";
+				font-size: 1em;
 				margin: 0;
 				padding: 0;
 			}
@@ -29,7 +30,7 @@
 			}
 			p {
 				margin: 2rem auto;
-				line-height: 2rem;
+				line-height: 1.5rem;
 			}
 			img {
 				border: 0;
@@ -47,6 +48,15 @@
 					border: 2px solid lightgrey;
 					border-radius: 4px;
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+				}
+				.strip p {
+					display: flex;
+					flex-direction: row;
+					gap: 0.5em;
+				}
+				.strip p img {
+					width: 100%;
+					min-width: 0;
 				}
 			}
 		</style>

@@ -7,6 +7,14 @@
 		<title></title>
 		<style>
 			@font-face {
+			font-family: 'Ubuntu Sans Variable';
+			font-style: italic;
+			font-display: swap;
+			font-weight: 100 800;
+			src: url(https://cdn.jsdelivr.net/fontsource/fonts/ubuntu-sans:vf@latest/latin-wght-italic.woff2) format('woff2-variations');
+			unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+			}
+			@font-face {
 				font-family: 'Ubuntu Mono';
 				font-style: normal;
 				font-display: swap;
@@ -19,13 +27,27 @@
 			}
 			html,
 			body {
-				font-family: "Ubuntu Mono";
+				color: lightgrey;
+				font-family: "Ubuntu Sans Variable", sans-serif;
+				background-color: rgb(78,78,78);
 				font-size: 1em;
 				margin: 0;
 				padding: 0;
 			}
-			h1 {
+			table {
+				margin: 0 auto;
+				width: auto;
+				max-width: 100%;
+			}
+			table td {
+				text-align: center;
+			}
+			table img {
+				width: 100%;
+			}
+			h1, h2, h3 {
 				margin: 0;
+				text-align: center;
 				line-height: 1.5em;
 			}
 			p {
@@ -36,27 +58,70 @@
 				border: 0;
 				margin: 0;
 			}
+			a {
+				color: white;
+				text-decoration: none;
+			}
+			hr {
+				box-shadow: none;
+				border: none;
+				height: 1px;
+				background: lightgrey;
+				margin: 2rem 0;
+			}
+			pre {
+				font-family: "Ubuntu Mono", monospace;
+				text-align: left;
+				background-color: rgb(96,96,96);
+				border-radius: 8px;
+				padding: 1rem;
+				overflow-x: scroll;
+			}
+			code {
+				line-height: 1.8em;
+			}
+			.example {
+				text-align: center;
+			}
 			main {
 				width: 100%;
 				max-width: 960px;
-				padding: 2rem 1rem 0;
-				text-align: center;
+				margin: 0 0;
+				padding: 2rem 1rem 1rem;
+				text-align: left;
+				background-color: rgb(87,87,87);
+				transition: margin .3s ease-out;
+			}
+			footer {
+				text-align: left;
+				margin: 0;
+				padding: 4rem 2rem;
+				background: rgb(78,78,78) url(/furo_banner.png) no-repeat right center;
+				background-size: auto 100%;
 			}
 			@media screen and (min-width: 960px) {
 				main {
 					margin: 4rem auto;
-					border: 2px solid lightgrey;
+					border: 2px solid rgb(87,87,87);
 					border-radius: 4px;
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
 				}
+				footer {
+					margin-top: 4rem;
+					text-align: center;
+				}
+				.strip,
 				.strip p {
 					display: flex;
 					flex-direction: row;
 					gap: 0.5em;
 				}
-				.strip p img {
+				.strip img {
 					width: 100%;
 					min-width: 0;
+				}
+				.strip figure {
+					margin: 0;
 				}
 			}
 		</style>
@@ -66,6 +131,10 @@
 		<main>
 			<div @raw="content" webc:nokeep></div>
 		</main>
+		<footer>
+			<p>Chestnut renders &copy; <a href="https://light0green.xyz">Yifan Pu</a></p>
+			<p>More shenanigans at <a href="https://bloomingbridges.xyz">bloomingbridges.xyz</a></p>
+		</footer>
 		<script type="module" @raw="getBundle('js')" webc:keep></script>
 	</body>
 </html>

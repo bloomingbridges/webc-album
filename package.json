@@ -2,6 +2,7 @@
   "name": "webc-album",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "start": "npx @11ty/eleventy --serve --incremental"
   },
@@ -19,7 +20,9 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@mdit/plugin-attrs": "^0.13.1",
     "@mdit/plugin-container": "^0.13.1",
+    "@mdit/plugin-figure": "^0.13.1",
     "markdown-it": "^14.1.0"
   }
 }
